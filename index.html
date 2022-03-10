@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="imagenes/logo1.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>IES Mar de Cádiz</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="--cabecera">
+        <div class="container-fluid" >
+            <div class="row justify-content-between --filaHeader">
+                <!-- LOGO MDC -->
+                <div class="col-1 --imgMDC">
+                    <img src="./imagenes/logo1.png" alt="Junta de Andalucía">
+                </div>
+                <div class="col-7 d-flex --titulo">
+                    <h1>I.E.S Mar de Cádiz</h1>
+                </div>
+                <div class="col-2 d-flex">
+                    <code class="--idioma">
+                        <div class="--idiomaDiv" id="google_translate_element"></div>
+                        <script type="text/javascript">// <![CDATA[
+                        function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                        }
+                        // ]]></script>
+                        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+                    </code>
+                </div>
+                <div class="col-1 --registro">
+                    <a href="./html/regisForm.html">Registrarse</a>
+                </div>
+                <div class="col-1 --login">
+                    <a href="./html/loginForm.html"><img class="img-fluid" src="./imagenes/Login_img.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <!-- MENU SUPERIOR -->
+        <nav id="menuSuperior" class="navbar navbar-expand-lg navbar-light --menuSuperior">
+            <!-- BOTONES -->
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navBar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="navbar-link btn btn-secondary" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><div class="dropdown show --dropDown">
+                            <a class="btn btn-secondary" href="#" role="button" id="centro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Centro
+                            </a>
+                          
+                            <div class="dropdown-menu" aria-labelledby="centro">
+                              <a class="dropdown-item" href="centro.html">Conoce el centro</a>
+                              <a class="dropdown-item" href="#">Organización</a>
+                              <a class="dropdown-item" href="#">Oferta Educativa</a>
+                              <a class="dropdown-item" href="#">Departamentos</a>
+                              <a class="dropdown-item" href="#">Proyectos de centro</a>
+                              <a class="dropdown-item" href="#">Orientación</a>
+                            </div>
+                          </div>
+                            </li>
+                        <li class="nav-item"><div class="dropdown show">
+                            <a class="btn btn-secondary" href="#" role="button" id="servicios" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Servicios
+                            </a>
+                          
+                            <div class="dropdown-menu" aria-labelledby="servicios">
+                              <a class="dropdown-item" href="#">Conoce el centro</a>
+                              <a class="dropdown-item" href="#">Organización</a>
+                              <a class="dropdown-item" href="#">Oferta Educativa</a>
+                              <a class="dropdown-item" href="#">Departamentos</a>
+                              <a class="dropdown-item" href="#">Proyectos de centro</a>
+                              <a class="dropdown-item" href="#">Orientación</a>
+                            </div>
+                          </div></li>
+                        <li class="nav-item"><a class="navbar-link btn btn-secondary" href="#">Matriculas</a></li>
+                        <li class="nav-item"><a class="navbar-link btn btn-secondary" href="#">Calendario</a></li>
+                        <li class="nav-item"><a class="navbar-link btn btn-secondary" href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- SECCION -->
+    <section class="--seccion">
+                <!-- Video -->
+                <video autoplay="autoplay" loop="loop" id="video_background" preload="auto" volume="50"/>
+
+                <source src="/multimedia/sea.mp4" type="video/mp4" />
+              
+              </video/>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- MENU LATERAL -->
+                <aside class="col-2 --asideL">
+                    <!-- MENU BOTONES -->
+                    <div class="navbar navbar-expand-sm d-flex flex-column">
+                        <ul class="nav flex-column" id="lista2">
+                          <li class="nav-item my-1 btn btn-secondary"><a href="">Centro</a></li>
+                          <li class="nav-item my-1 btn btn-secondary"><a href="">Oferta educativa</a></li>
+                          <li class="nav-item my-1 btn btn-secondary"><a href="">Horarios</a></li>
+                          <li class="nav-item my-1 btn btn-secondary"><a href="">Calendario</a></li>
+                          <li class="nav-item my-1 btn btn-secondary"><a href="">Departamentos</a></li>
+                          <li class="nav-item my-1 btn btn-secondary"><a href="">Biblioteca</a></li>
+                          <li class="nav-item my-1 btn btn-secondary"><a href="">Contacto</a></li>
+                        </ul>   
+                      </div>
+                </aside>
+                <!-- CENTRO -->
+                <div class="col-10 --centro">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <!-- CAROUSEL -->
+                            <div id="cita" class="col-8" >
+                                <div class="--citaRA">
+                                    <p> Hace falta estar ciego, tener como metidas en los ojos raspaduras de vidrio, cal viva, arena hirviendo, para no ver la luz que salta en nuestros actos, que ilumina por dentro nuestra lengua, nuestra diaria palabra.<br>Rafael Alberti</p>
+                                </div>
+                            </div>
+                                            <!-- NOTICIAS -->
+                            <aside class="col-4 --noticias">
+                                <div class="d-flex flex-column --divNoticias" >
+                                    <!-- H2 -->
+                                    <div class="--h2Div">
+                                        <h2 class="h2" >NOTICIAS</h2>
+                                    </div>
+                                    <!-- SCROLL -->
+                                    <div class="overflow-scroll --scroll">
+                                        <div class="overflow-auto container --noticia" >
+                                            <h5 class="h5">Noticia 1  dd/mm/yyyy</h5>
+                                            <br>
+                                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                                                faucibus commodo maximus. Morbi facilisis ipsum ligula, vitae
+                                                    aliquet magna blandit et.</p>
+                                        </div>
+                                        <div class="overflow-auto container --noticia" >
+                                            <h5 class="h5">Noticia 2  dd/mm/yyyy</h5>
+                                            <br>
+                                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                                                faucibus commodo maximus. Morbi facilisis ipsum ligula, 
+                                                vitae aliquet magna blandit et.</p>
+                                        </div>
+                                        <div class="overflow-auto container --noticia" >
+                                            <h5 class="h5">Noticia 3  dd/mm/yyyy</h5>
+                                            <br>
+                                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                                                faucibus commodo maximus. Morbi facilisis ipsum ligula, 
+                                                vitae aliquet magna blandit et.</p>
+                                        </div>
+                                        <div class="overflow-auto container --noticia" >
+                                            <h5 class="h5">Noticia 4  dd/mm/yyyy</h5>
+                                            <br>
+                                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                                                faucibus commodo maximus. Morbi facilisis ipsum ligula, 
+                                                vitae aliquet magna blandit et.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+
+                    <!-- MATRICULAS -->
+                    <div class="col-12 d-flex --centroInferior">
+                        <article class="--matriculas">
+                            <!-- H2 -->
+                             <div class="--h2Not" >
+                                <h2 class="h2" >MATRICULACIONES 21-22</h2>
+                            </div> 
+                            <!-- DIFERENTES MATRICULACIONES -->
+                            <div class="d-flex flex-column overflow-scroll --scrollNot">
+                                <div class=" --matriItem" >
+                                    <h5 class="h5"> Educación Secundaria Obligatoria</h5>
+                                    <p class="text" >Primer y segundo ciclo de Educación Secundaria Obligatoria</p>
+                                </div>
+                                <div class=" --matriItem" >
+                                    <h5 class="h5">Matrícula curso 2</h5>
+                                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                                                faucibus commodo maximus.</p>
+                                </div>
+                                <div class=" --matriItem" >
+                                    <h5 class="h5">Matrícula curso 3</h5>
+                                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                                                faucibus commodo maximus.</p>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- CALENDARIO -->
+                        <div id="cal">
+                            <div class="header"> 
+                                <span class="left button" id="prev"> &lang; </span> 
+                                <span class="left hook"></span> 
+                                <span class="month-year" id="label"> Abril 2022 </span> 
+                                <span class="right hook"></span> 
+                                <span class="right button" id="next"> &rang; </span>
+                            </div> 
+                            <table id="days"> 
+                                <td>dom</td> 
+                                <td>lun</td> 
+                                <td>mar</td> 
+                                <td>mie</td> 
+                                <td>jue</td> 
+                                <td>vie</td> 
+                                <td>sab</td>
+                         
+                            </table> 
+                            <div id="cal-frame"> 
+                                <table class="curr"> 
+                                    <tbody> 
+                                        <tr><td class="nil"></td><td class="nil"></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr> 
+                                        <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td class="today">11</td><td>12</td></tr> 
+                                        <tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr> 
+                                        <tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr> 
+                                        <tr><td>27</td><td>28</td><td>29</td><td>30</td><td class="nil"></td><td class="nil"></td><td class="nil"></td></tr> 
+                                    </tbody> 
+                                </table>
+                         
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </script>
+    <script src="/js/calendario.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>       
+    <script>
+        var cal = CALENDAR(); 
+        cal.init();
+    </script>
+</body>
+</html>
