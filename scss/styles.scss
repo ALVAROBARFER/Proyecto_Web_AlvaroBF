@@ -8,6 +8,7 @@ $color6:#34394c;
 $color7: #f0e8dc;
 $color8: #6194bb;
 $colorTransparent: rgba(0, 0, 255, 0);
+$colorAzulTransparente: rgba(52, 57, 76, 0.667);
 
 // Import fonts
 @font-face {
@@ -24,17 +25,15 @@ $colorTransparent: rgba(0, 0, 255, 0);
 
 //Default
 body{
+    margin: 0;
     font-family: candara;
-}
-
-*{
-    margin: 0px;
-    padding: 0px;
 }
 
 //Cabecera
 .--cabecera{
-    background-color: $color2;
+    background: $color2;
+    background: -moz-linear-gradient(top, $color6, $color2);
+    background: -webkit-gradient(linear, left top, left bottom, from($color6), to($color2));
     width: 100%;
     position: fixed;
     z-index: 10;
@@ -43,7 +42,7 @@ body{
 
 // Logo Mar de Cadiz
 .--imgMDC{
-    background-color: $color2;
+    background-color: $colorTransparent;
     img{
         display: block;
         margin: auto;
@@ -52,7 +51,7 @@ body{
     }
 // Titulo
 .--titulo{
-    background-color: $color2;
+    background-color: $colorTransparent;
     width: 100%;
     h1{
         text-align: center;
@@ -62,7 +61,9 @@ body{
 }
 // Selector de idiomas
 .--idiomaCol{
+    display: flex;
     flex-direction: column;
+    justify-content: end;
     align-content: center;
     width: fit-content;
     & .--idioma{
@@ -74,7 +75,7 @@ body{
 }
 // Registro de usuario
 .--registro{
-    background-color: $color2;
+    background-color: $colorTransparent;
     width: fit-content;
     padding-top: 15px;
     a{
@@ -86,7 +87,7 @@ body{
 }
 // Inicio de sesion
 .--login{
-    background-color: $color2;
+    background-color: $colorTransparent;
     width: fit-content;
     padding-top: 15px;
     a{
@@ -135,6 +136,8 @@ body{
 // Menu lateral
 .--asideL{
         background-color: $color6;
+        display: flex;
+        flex-direction: column;
         width: fit-content;
         //z-index: 1;
         ul{
@@ -161,6 +164,7 @@ body{
             }
         }
     }
+
 // Contenido
 .--centro{
         background-color: $color5;
@@ -186,7 +190,7 @@ body{
                     }
                 }
 // Scroll matriculas
-                & .--scrollNot{
+                & .--scrollMat{
                     background-color: $color7;
                     background-color: $color7;
                     width: auto;
@@ -215,15 +219,52 @@ body{
     z-index: 1;
     & .--citaRA{
         background-color: $colorTransparent;
-        font-size: larger;
-        font-weight: 600;
-        color: $color7;
+        border-style: groove;
+        border-color: $color4;
+        padding: 5px;
+        p{
+            font-size: larger;
+            font-weight: 400;
+            color: $color7;
+            span{
+                font-family:Georgia, 'Times New Roman', Times, serif;
+                font-weight: 100;
+                font-style: italic;
+            }
+        }
+    }
+}
+.--saludo{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    & .saludoDir{
+        border-style: groove;
+        border-color: $color4;
+        padding: 5px;
+        h2{
+            color: $color6;
+        }
+        p{
+            font-size: larger;
+            font-weight: 400;
+            color: $color6;
+            span{
+                font-family:Georgia, 'Times New Roman', Times, serif;
+                font-weight: 100;
+                font-style: italic;
+            }
+        }
     }
 }
 
 // Carrusel de imagenes
 .--carousel{
     background-color: $color5;
+    margin-top: 15px;
+    align-self: center;
 }
 // Div de imagenes
 .--imgCarou{
@@ -282,6 +323,7 @@ body{
     font: 13px/1.5 "Helvetica Neue", Helvatica, Arial, san-serif;
     display:table;
     height: fit-content;
+    z-index: 1;
 }
 #cal .header {
     cursor:default;
@@ -443,21 +485,177 @@ body{
     margin-top: 0; // remove the gap so it doesn't close
  }
 
- //Multimedia
+ // Pie de página
 
+ .--pie{
+     z-index: 7;
+     & .--filaPie{
+         display: flex;
+         align-content: center;
+         z-index: 8;
+         background-color: $colorAzulTransparente;
+         & .--imgJA{
+             display: flex;
+             flex-direction: column;
+             align-content: center;
+             z-index: 9;
+             background-color: $colorAzulTransparente;
+             img{
+                display: block;
+                margin: auto;
+                width: 120px;
+                height: auto;
+                z-index: 10;
+             }
+
+         }
+         & .--imgMin{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            z-index: 9;
+            background-color: $colorAzulTransparente;
+             img{
+                display: block;
+                margin: auto;
+                width: 90%;
+                height: auto;
+                z-index: 10;
+             }
+            
+         }
+         & .--contacto{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            background-color: $colorAzulTransparente;
+            z-index: 9;
+            h4{
+                align-self: center;
+                font-weight: 600;
+                color: $color7;
+                z-index: 10;
+            }
+            ul{
+                align-self: center;
+                z-index: 10;
+                li{
+                    list-style: none;
+                    font-size: larger;
+                    font-weight: 600;
+                    color: $color7;
+                    z-index: 10;
+                }
+            } 
+         }
+         & .--social{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 9;
+            background-color: $colorAzulTransparente;
+            a{
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                img{
+                    display: block;
+                    margin: auto;
+                    width: 100px;
+                    height: auto;
+                    z-index: 10;
+                 }
+            }
+            
+         }
+     }
+ }
+
+ //Multimedia
+// Video
  #video_background{
      z-index: 0;
      position: fixed;
+     width: 100%;
  }
+// Audio
 
 // Responsive media query
 
 // Small devices (phones, 576px and up)
-@media screen and (min-width: 576px) {
+@media screen and (max-width: 576px) {
+
     .--imgMDC{
         width: auto;
     }
-    
+
+    .--cabecera{
+        width: 100%;
+        & .--filaHeader{
+            display: flex;
+            align-items: flex-end;
+            & .--imgMDC{
+                width: fit-content;
+                img{
+                    width: 40px;
+                }
+            }
+            & .--titulo{
+                width: 100%;
+            }
+            & .--idiomaCol{
+                width: 100%;
+            }
+            & .--login{
+                width: 50%;
+            }
+            & .--registro{
+                width: 50%;
+            }
+        }
+    }
+    .--seccion{
+        padding-top: 150px;
+    }
+    #cita{
+        width: 100%;
+        .--citaRA{
+            padding: 2px;
+            p{
+                font-size: smaller;
+            }
+        }
+    }
+    .--centroInferior{
+        flex-direction: column;
+
+        & .--matriculas{
+            margin: 0;
+            width: 100%;
+            & .--h2Not{
+                h2{
+                    font-size: smaller;
+                }
+            }
+        }
+    }
+
+    .--pie{
+        display: none;
+    }
+    .--noticias{
+        width: 100%;
+    }
+    .--centro{
+        width: 100%;
+    }
+    #matris{
+        width: 100%;
+        flex-direction: column;
+    }
+    .--matriculas{
+        width: 100%;
+    }
 
 }
 
@@ -487,14 +685,40 @@ body{
 // X-Large devices (large desktops, 1200px and up)
 @media screen and (max-width: 1200px) {
     .--carousel{
-        width: 100%;
+        display: none;
     }
     .--noticias{
-        background-color: $color5;
+        background-color: $colorTransparent;
         margin-top: 30px;
         width: 100%;
     }
 
+}
+
+@media screen and (max-width: 1278px) {
+
+    .--saludo{
+        width: 700px;
+    }
+    .--asideL{
+        display: none;
+    }
+    .--pie{
+        justify-content: space-between;
+        background-color: $colorAzulTransparente;
+
+        & .--filaPie{
+            justify-content: space-between;
+            z-index: 8;
+            background-color: $colorAzulTransparente;
+            & .--imgMin{
+                display: none;
+             }
+            & .--imgJA{
+                display: none;
+            }
+        }
+    }
 }
 
 // XX-Large devices (larger desktops, 1400px and up)
