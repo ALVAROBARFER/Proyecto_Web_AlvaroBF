@@ -46,7 +46,7 @@ body{
     img{
         display: block;
         margin: auto;
-        width: 70px;
+        width: 80px;
         height: auto;
     }
 // Titulo
@@ -102,9 +102,13 @@ body{
 }
 // Nav del menu superior
 .--menuSuperior{
-    background-color: $color6;
+    background-color: $colorTransparent;
     width: 100%;
-    position: fixed;
+    position: relative;
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    background-color: $color6;
     z-index: 10;
     ul{
         display: flex;
@@ -122,11 +126,11 @@ body{
                 letter-spacing: 1px;
                 margin: 0 10px;
                 color: $color4;
-                transition: 0.7s;
             }
         }
     }
 }
+
 // Seccion
 .--seccion{
     background-color: $color5;
@@ -168,6 +172,8 @@ body{
 // Contenido
 .--centro{
         background-color: $color5;
+        flex-direction: column;
+        justify-content: center;
 // Contenido inferior
         & .--centroInferior{
             flex-direction: row;
@@ -234,6 +240,9 @@ body{
         }
     }
 }
+.audio{
+    align-self: center;
+}
 .--saludo{
     display: flex;
     flex-direction: column;
@@ -270,6 +279,52 @@ body{
 .--imgCarou{
     width: 100%;
 }
+
+// Formulario Registro
+.--registroForm{
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 300px;
+    padding: 5px;
+    background-color: $color2;
+    width: 30%;
+    & .--form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        & .--input{
+            width: auto;    
+        }
+        & .--boton{
+            background-color: $color3;
+            width: fit-content;
+        }
+    }
+}
+
+// Formulario Login
+.--loginForm{
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 300px;
+    padding: 5px;
+    background-color: $color2;
+    width: 30%;
+    height: fit-content;
+    & .--form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        & .--input{
+            width: auto;
+        }
+        & .--boton{
+            background-color: $color3;
+            width: fit-content;
+        }
+    }
+}
+
 // Noticias
 .--noticias{
     background-color: $colorTransparent;

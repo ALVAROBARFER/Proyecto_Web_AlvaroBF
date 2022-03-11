@@ -23,7 +23,7 @@ body {
   .--imgMDC img {
     display: block;
     margin: auto;
-    width: 70px;
+    width: 80px;
     height: auto; }
   .--imgMDC .--titulo {
     background-color: rgba(0, 0, 255, 0);
@@ -63,9 +63,13 @@ body {
       width: 25px; }
 
 .--menuSuperior {
-  background-color: #34394c;
+  background-color: rgba(0, 0, 255, 0);
   width: 100%;
-  position: fixed;
+  position: relative;
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+  background-color: #34394c;
   z-index: 10; }
   .--menuSuperior ul {
     display: flex;
@@ -82,8 +86,7 @@ body {
         font-weight: 600;
         letter-spacing: 1px;
         margin: 0 10px;
-        color: #f7f7f7;
-        transition: 0.7s; }
+        color: #f7f7f7; }
 
 .--seccion {
   background-color: #e1ba97;
@@ -116,7 +119,9 @@ body {
         color: #f7f7f7; }
 
 .--centro {
-  background-color: #e1ba97; }
+  background-color: #e1ba97;
+  flex-direction: column;
+  justify-content: center; }
   .--centro .--centroInferior {
     flex-direction: row; }
     .--centro .--centroInferior .--matriculas {
@@ -168,6 +173,9 @@ body {
         font-weight: 100;
         font-style: italic; }
 
+.audio {
+  align-self: center; }
+
 .--saludo {
   display: flex;
   flex-direction: column;
@@ -196,6 +204,41 @@ body {
 
 .--imgCarou {
   width: 100%; }
+
+.--registroForm {
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 300px;
+  padding: 5px;
+  background-color: #86a4bf;
+  width: 30%; }
+  .--registroForm .--form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .--registroForm .--form .--input {
+      width: auto; }
+    .--registroForm .--form .--boton {
+      background-color: #707070;
+      width: fit-content; }
+
+.--loginForm {
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 300px;
+  padding: 5px;
+  background-color: #86a4bf;
+  width: 30%;
+  height: fit-content; }
+  .--loginForm .--form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .--loginForm .--form .--input {
+      width: auto; }
+    .--loginForm .--form .--boton {
+      background-color: #707070;
+      width: fit-content; }
 
 .--noticias {
   background-color: rgba(0, 0, 255, 0);
